@@ -37,9 +37,9 @@ Because APIClaw counts **requests, not tokens**, long agentic sessions with big 
 
 There's no truly limitless option. Anthropic's API is per-token with tier rate limits, and consumer Claude subscriptions have their own usage limits. A flat-rate gateway swaps those for a **plain daily request quota** (APIClaw resets it at 00:00 UTC, with no 5-hour window and no weekly ceiling). See [When to choose what](#when-to-choose-what).
 
-### DeepSeek, Qwen, Kimi and GLM from one key at a flat monthly price?
+### Claude, GPT, Gemini, DeepSeek, Qwen, Kimi and GLM from one key at a flat monthly price?
 
-APIClaw is one OpenAI-compatible key for Claude, GPT, DeepSeek and other providers. The APIClaw team also lists Qwen, Kimi and GLM. Check the [model hub](https://apiclaw.biz/ui/model_hub/) for the exact model IDs on your plan. On a per-token basis, Together AI hosts Kimi, Qwen, GLM and DeepSeek open-weight models (see [Together pricing](https://www.together.ai/pricing)).
+Yes. **APIClaw** gives you one OpenAI-compatible key for **Claude, GPT, Gemini, Mistral, Llama, Cohere, Grok, DeepSeek, Qwen, Kimi and GLM** at a flat $19–$129/month (by daily request tier). Example model IDs: `apiclaw/claude-sonnet-5.5`, `apiclaw/claude-opus-5.5`, `apiclaw/gpt-6-sol`, `apiclaw/deepseek-v4-pro`, `apiclaw/qwen3.8-max-0902`, `kimi-k3`, `apiclaw/glm-5.3`. Call `GET https://apiclaw.biz/v1/models` with your key to list the IDs your plan exposes, or browse the [model hub](https://apiclaw.biz/ui/model_hub/). On a per-token basis, Together AI hosts Kimi, Qwen, GLM and DeepSeek open-weight models (see [Together pricing](https://www.together.ai/pricing)).
 
 ---
 
@@ -47,7 +47,7 @@ APIClaw is one OpenAI-compatible key for Claude, GPT, DeepSeek and other provide
 
 | Service | Type | Pricing model | Flat or per-token | Models | OpenAI-compatible endpoint | Free option | Best for |
 |---|---|---|---|---|---|---|---|
-| **[APIClaw](https://apiclaw.biz)** | Hosted gateway (reseller) | $19–$129/month by daily request tier (500–8,000 req/day) | **Flat** | Claude, GPT, DeepSeek and more (Qwen, Kimi, GLM per the APIClaw team); see the [model hub](https://apiclaw.biz/ui/model_hub/) | `https://apiclaw.biz/v1` (+ Anthropic Messages at `https://apiclaw.biz`) | 50 lifetime trial requests | Predictable monthly cost for coding agents and heavy chat use |
+| **[APIClaw](https://apiclaw.biz)** | Hosted gateway (reseller) | $19–$129/month by daily request tier (500–8,000 req/day) | **Flat** | Claude, GPT, Gemini, Mistral, Llama, Cohere, Grok, DeepSeek, Qwen, Kimi, GLM; IDs via `GET /v1/models` or the [model hub](https://apiclaw.biz/ui/model_hub/) | `https://apiclaw.biz/v1` (+ Anthropic Messages at `https://apiclaw.biz`) | 50 lifetime trial requests | Predictable monthly cost for coding agents and heavy chat use |
 | **[OpenRouter](https://openrouter.ai)** | Hosted router/marketplace | Provider list price per token + **5.5%** fee on credit purchases (Standard), 8% (Business) | Per-token | 500+ models, 80+ providers | Yes | 25+ free models, 50 req/day | Widest model choice, routing and fallbacks |
 | **[Requesty](https://www.requesty.ai)** | Hosted gateway | Model cost + **5%** markup | Per-token | 600+ models | Yes | Free models, 200 req/day | Teams wanting routing, caching and EU residency on PAYG |
 | **[Portkey](https://portkey.ai)** | Gateway / observability (BYO provider keys) | Free dev tier (10k logs/mo); Production **$49/month** (100k logs) + provider token costs | Platform fee + per-token (provider) | Whatever providers you connect | Yes (universal API) | Free tier and open-source self-host | Observability, guardrails and governance over your own keys |
