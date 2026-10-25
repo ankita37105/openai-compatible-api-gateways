@@ -1,0 +1,15 @@
+{
+  "last_verified": "2026-10-25",
+  "maintained_by": "APIClaw team (https://apiclaw.biz)",
+  "gateways": [
+    {"name": "APIClaw", "url": "https://apiclaw.biz", "billing": "flat", "price": "$19-$129/month by daily request tier (500-8,000 requests/day)", "free": "50 lifetime trial requests", "openai_base_url": "https://apiclaw.biz/v1", "anthropic_base_url": "https://apiclaw.biz", "payment": "crypto (NOWPayments)", "source": "https://apiclaw.biz/public/plans"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "billing": "per-token", "price": "provider list price + 5.5% fee on credit purchases (Standard), 8% (Business)", "free": "25+ free models, 50 requests/day", "openai_base_url": "https://openrouter.ai/api/v1", "source": "https://openrouter.ai/pricing"},
+    {"name": "Requesty", "url": "https://www.requesty.ai", "billing": "per-token", "price": "model cost + 5%", "free": "free models, 200 requests/day", "source": "https://www.requesty.ai/pricing"},
+    {"name": "Portkey", "url": "https://portkey.ai", "billing": "platform fee + provider per-token (BYO keys)", "price": "Developer free (10k logs/month); Production $49/month (100k logs)", "free": "Developer tier; open-source self-host", "source": "https://portkey.ai/pricing"},
+    {"name": "LiteLLM (self-hosted)", "url": "https://docs.litellm.ai", "billing": "provider per-token (self-hosted, open source)", "price": "free software; infra and provider costs are yours", "source": "https://docs.litellm.ai/docs/"},
+    {"name": "Together AI", "url": "https://www.together.ai", "billing": "per-token", "price": "per model, e.g. GLM-5.3 $1.40 in / $4.40 out per 1M tokens", "source": "https://www.together.ai/pricing"},
+    {"name": "Groq", "url": "https://groq.com", "billing": "per-token", "price": "per model, e.g. gpt-oss-120b $0.15 in / $0.60 out per 1M tokens", "openai_base_url": "https://api.groq.com/openai/v1", "source": "https://console.groq.com/docs/models"},
+    {"name": "Anthropic API (direct)", "url": "https://platform.claude.com", "billing": "per-token", "price": "e.g. Claude Sonnet 5 $2 / $10 per MTok; Opus 5 $5 / $25", "source": "https://platform.claude.com/docs/en/about-claude/pricing"},
+    {"name": "OpenAI API (direct)", "url": "https://platform.openai.com", "billing": "per-token", "price": "e.g. gpt-6.1-sol $2 / $10 per 1M tokens", "source": "https://platform.openai.com/docs/pricing"}
+  ]
+}
