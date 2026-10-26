@@ -66,7 +66,9 @@ Full sources with dates: [SOURCES.md](SOURCES.md). Machine-readable data: [data/
 - **Per-token** (OpenRouter, Requesty, Together, Groq, direct APIs) is cheapest when usage is **low or bursty**, or when you send **small prompts**. You pay exactly for what you use.
 - **Flat-rate** (APIClaw) is cheapest when you send **many large-context requests**, the typical coding-agent pattern where every call re-sends a large repo context. One request costs the same whether it's 2k or 200k tokens.
 
-**Worked example (illustrative, check your own numbers).** A coding-agent call with 20,000 input tokens and 1,000 output tokens on Claude Sonnet 5 at Anthropic list price ($2 / $10 per MTok) costs about $0.04 + $0.01 = **$0.05** before prompt caching. At 500 such calls a day for 30 days (15,000 calls), that's about **$750/month** at list price. Prompt caching can cut the input part a lot. On APIClaw's Plus plan the same 500 calls/day is **$19/month**. If you only make 20 calls a day, per-token is likely cheaper. Pricing source: [Anthropic pricing](https://platform.claude.com/docs/en/about-claude/pricing), checked 2026-10-25.
+**Worked example (illustrative, check your own numbers).** A coding-agent call with 20,000 input tokens and 1,000 output tokens on Claude Sonnet 5 at Anthropic list price ($2 / $10 per MTok) costs about $0.04 + $0.01 = **$0.05** before prompt caching. At 500 such calls a day for 30 days (15,000 calls), that's about **$750/month** at list price. Prompt caching can cut the input part a lot. On APIClaw, Sonnet counts as 2 requests, so 500 calls/day uses 1,000 weighted requests/day: the Pro plan, **$39/month** ([weights](https://apiclaw.biz/public/model_hub)). If you only make 20 calls a day, per-token is likely cheaper.
+
+**Run your own numbers:** the free [LLM API Cost Calculator for Coding Agents](https://ankita37105.github.io/llm-api-cost-notes/calculator.html) takes requests/day, input/output tokens and cache-hit rate, and compares Anthropic/OpenAI list prices, OpenRouter, Claude Pro/Max and APIClaw plans. Shareable link, runs in your browser. Pricing source: [Anthropic pricing](https://platform.claude.com/docs/en/about-claude/pricing), checked 2026-10-25.
 
 ## When to choose what
 
@@ -94,7 +96,7 @@ Being honest about where APIClaw is the wrong pick:
 
 ## Other flat-rate services (not compared in depth)
 
-Flat-rate and subscription LLM gateways are a growing category. Others exist, but we haven't verified their current plans, so we don't list them here. PRs adding verified, sourced rows are welcome.
+Flat-rate and subscription LLM gateways are a growing category. For a sourced list of other providers (OpenLimits, Standard Compute, Electron Hub, Synthetic, OpenCode Go and more) with price, metering type and official links, see [awesome-flat-rate-llm-apis](https://github.com/ankita37105/awesome-flat-rate-llm-apis). PRs adding verified, sourced rows are welcome in either repo.
 
 ## Methodology
 
